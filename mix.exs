@@ -16,7 +16,10 @@ defmodule Hobot.Plugin.Adapter.TwitterStreaming.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [
+        :logger,
+        :extwitter
+      ]
     ]
   end
 
@@ -25,7 +28,8 @@ defmodule Hobot.Plugin.Adapter.TwitterStreaming.Mixfile do
     [
       {:ex_doc, "~> 0.16", only: [:dev, :test], runtime: false},
       {:credo, "~> 0.8", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false}
+      {:dialyxir, "~> 0.5", only: [:dev, :test], runtime: false},
+      {:extwitter, "~> 0.8"}
     ]
   end
 
